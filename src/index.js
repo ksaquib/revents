@@ -1,8 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './app/layout/App';
 import * as serviceWorker from './serviceWorker';
+
+
+// Below code should be used if the reload flickers 
+
+/*const rootEl = document.getElementById('root');
+let render = ()=>{
+  ReactDOM.render(<App />,rootEl)
+}
+if(module.hot){
+  module.hot.accept('./App',()=>{
+    setTimeout(render)
+  })
+}
+render()*/
 
 ReactDOM.render(
   <React.StrictMode>
